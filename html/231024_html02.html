@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form>
+		<input type="button" value="버튼">
+		<input type="text" placeholder="ID">
+		<input type="password" placeholder="PW">
+		<input type="checkbox" name="fruits" value="apple" checked>apple
+		<input type="checkbox" name="fruits" value="banana">banana
+		<input type="radio" name="gender" value="man" checked>남자
+		<input type="radio" name="gender" value="woman">여자
+		<input type="date" name="calendar">
+		<input type="datetime-local" name="calendar">
+		<hr>
+		<select>
+			<optgroup label="커피">
+				<option value="americano">아메리카노</option>
+				<option value="latte" selected>라떼</option>
+				<option value="espresso">에스프레소</option>
+			</optgroup>
+			<optgroup label="과일">
+				<option value="americano">바나나</option>
+				<option value="latte">딸기</option>
+				<option value="espresso" disabled><i>사과</i></option>
+			</optgroup>
+		</select>
+	</form>
+	<br><br><br>
+	<!-- table -->
+	<table border="1" cellspacing="5" cellpadding="5" width="400" height="100">
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+			<th>전화번호</th>
+		</tr>
+		<tr>
+			<td colspan="2">우리</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td rowspan="2">우리</td>
+			<td>100</td>
+			<td>01012345667</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>01012345667</td>
+		</tr>
+	</table>
+</body>
+
+</html>
