@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>display를 공부합니당!</title>
+	<style>
+		.inline{
+			background-color: lightpink;
+			/* 글자수 따라 가변적인 거기 때매 width 고정설정 안됨 */
+		}
+		.block{
+			background-color: lightgreen;
+			/* width 가능 */
+			height: 200px;
+		}
+		.inline-block{
+			display: inline-block;
+			background-color: brown;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<!-- inline & block -->
+	<!--
+	<span>
+		<div></div>
+	</span>
+	<ul>
+		<span></span>
+	</ul>
+	이 두개는 문법적으로 불가. 표현은 됨.
+	-->
+	
+	<span class="inline">Hello</span>
+	<span class="inline">World</span>
+	<div class="block">Hello Block</div>
+	<!-- 블락 뒤에 스팬쓰면 무조건 그 다음줄에 됨 -->
+	<span>block check</span>
+	<div class="inline-block">Inline-Block-trial</div>
+	<!-- 인라인블락 뒤에 인라인, 인라인블락쓰면 밑에가 아니라 옆에 나란히 쓰임 -->
+	<span>block check</span>
+	<div style="background-color: aqua;">inline-block얼마나 가릴수 있니?</div>
+	<!-- 근데 인라인 블락 다음에 블락(div)쓰면 인블(height)끝난지점 다음 줄에 나옴-->
+</body>
+</html>

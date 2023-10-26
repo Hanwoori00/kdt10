@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>26일 입니다!</title>
+	<style>
+		/* 가상 클래스 */
+		/* hover: 마우스 커서 올릴때 */
+		a:hover{
+			color: white;
+		}
+		/* active: 마우스 클릭하고 있는 동안*/
+		a:active{
+			background-color: blue;
+		}
+		/* 빈칸이 클릭되어 커서로 포커싱이 되어있으면 */
+		input:focus{
+			background-color: orange;
+		} 
+		h1:hover{
+			color: red;
+		}
+		/* first-child */
+		.fruits span:first-child{
+			color: red;
+		}
+		/* last_child */
+		.fruits h3:last-child{
+			color: pink;
+		} 
+		/* nth_child(n) */
+		.fruits *:nth-child(2n){
+			background-color: yellow;
+		}
+		/* not */
+		.fruits *:not(span){
+			background-color: lightblue;
+			color: blueviolet
+		}
+
+		/* 가상 요소 선택자 > 조건에 따라 컨텐츠를 앞뒤로 삽입하는 방식*/
+		/* before */
+		.fruits::before{
+			/* content: "과일 목록 시작🍎" */
+			content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVG2PS3tH1XXfNCH8owFoSQ9CEpr2fRk7UEw&usqp=CAU);
+		}
+		.fruits::after{
+			content: "과일 목록 끝";
+		}
+
+		.box::before{
+			content: "🚕"
+		}
+		.box::after{
+			content: "빨리!!!"
+		}
+		/* 속성 선택자 input type="text"같은 애 뒤에 readonly, placeholder같은 속성을 특정할 수 있음*/
+		[readonly]{
+			background-color: lightcoral;
+		}
+		*:not([placeholder]){
+			background-color: lightgoldenrodyellow;
+		}
+		/* css 선택자 우선순위 */
+		/* !important > 인라인 스타일 > id > 클래스,속성,가상선택자 > 태그 선택자 > 전체 선택자등등 */
+		a:hover {
+			color: red;
+		}
+		a:hover {
+			color: blue;
+		}
+		/* 이렇게 둘일경우 밑에꺼가 최종적으로 채택되지만, 위에꺼에 !important 붙이면 red가 됨 */
+	</style>
+</head>
+<body>
+	<h1>셋째날 실습이에요</h1>
+	<a href="https://www.naver.com">Naver</a>
+	<br>
+	<input type="text">
+	<hr>
+	<div class="fruits">
+		<span>딸기</span>
+		<span>수박</span>
+		<div>오렌지</div>
+		<p>망고</p>
+		<h3>사과</h3>
+	</div>
+	<hr>
+	<div class="box">여기요!</div>
+	<hr>
+	<input type="text">
+	<input type="text" readonly>
+	<input type="text" placeholder="PW">
+</body>
+</html>
