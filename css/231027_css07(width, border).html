@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>위쓰와 하이트를 배워요</title>
+	<style>
+		/* border */
+		.border{
+			width: 200px;
+			height: 200px;
+			border-top: 3px dotted red;
+			border-right: 6px dashed orange;
+			border-bottom: 10px double yellow;
+			border-left: 20px ridge yellowgreen;
+			border-radius: 0% 30% 60% 90%;
+		}
+		.box-sizing{
+			width: 100px;
+			height: 100px;
+			padding: 20px;
+			border: 15px solid red;
+			background-color: olivedrab;
+		}	
+		.square{
+			width: 100px;
+			height: 100px;
+			border: 1px solid;
+			display: inline-block;
+		}
+		.d-none{
+			display: none;
+			background-color: red;
+		}
+		.invisible{
+			visibility: hidden;
+			background-color: orangered;
+		}
+		.opacity-0{
+			opacity: 0;
+			background-color: tomato;
+		}
+		.hover_prac{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			
+		}
+		.hover_prac:hover{
+			/* visibility: hidden; */
+			opacity: 0;
+			/* opacity는 hover라는 속성이 남아있기 때문에
+			마우스 움직여도 투명한 상태가 유지됨 */
+			/* display: none; */
+		}
+	</style>
+</head>
+<body>
+	<!--
+	
+	<div style="background-color: aquamarine; width: 100px; height: 100px;" ></div>
+	<div style="background-color: antiquewhite; width: 100vw; height: 100px;" ></div>
+	
+	<div style="background-color: orange; width: calc(30vw - 100px); height: 30vh; min-width: 200px"></div>
+	-->
+	<!-- <div style="background-color: lightsalmon; width: 10vw; height: 10vw; text-align: center;line-height: 10vw; margin:calc((100vh - 10vw)/2) auto">kdt</div> -->
+	<!-- 와 이문제 진짜 어려웠다 ㅋㅋ -->
+
+	<!-- border -->
+	<div class="border"></div>
+	<hr>
+	box-sizing 디자인에 따라 컨텐츠박스로 할지 보더박스로 할지 선택-->
+	<!-- <div class="box-sizing" style="box-sizing: content-box;">content-box</div>
+	<div class="box-sizing" style="box-sizing: border-box;">content-box</div>
+	<hr>
+	<!-- visibility -->
+	<div class="square">original</div>
+	<div class="square d-none">d-none</div>
+	<div class="square invisible">invisible</div>
+	<div class="square opacity-0">opacity-0</div>
+	<div class="square">original</div> 
+	<hr>
+	<div class="hover_prac"></div>
+	<hr>
+	<!-- overflow -->
+	<div class="square" style="overflow: scroll;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae adipisci repellat explicabo, obcaecati mollitia saepe qui deleniti ad quas, cupiditate deserunt accusamus dolores repellendus fugit ab voluptatibus in? Dolore, blanditiis.
+	Aspernatur amet beatae quisquam magnam quod, ex assumenda quo sequi nisi dolorum ad reprehenderit harum ea sed recusandae soluta? Corporis ad aliquam alias amet reprehenderit cumque possimus animi, veritatis sunt!
+	Atque quisquam expedita, ullam earum deserunt error ratione explicabo temporibus ea neque autem saepe cum consequatur, suscipit dolore labore recusandae eveniet. Omnis dicta quibusdam, exercitationem non magnam optio. Odit, perspiciatis!</div>
+	<div class="square" style="overflow: auto;">overflowLorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae adipisci repellat explicabo, obcaecati mollitia saepe qui deleniti ad quas,</div>
+</body>
+</html>

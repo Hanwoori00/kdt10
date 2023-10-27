@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>설문조사 꾸미기</title>
+	<style>
+		@font-face {
+		font-family: 'YEONGJUPunggiGinsengTTF';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/YEONGJUPunggiGinsengTTF.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		}
+
+	</style>
+</head>
+<body style="background-color: lightgoldenrodyellow;">
+
+	<div style="margin: 50px 30vw ; border: 5px solid;border-radius: 10% ;width: 40vw;padding: 3%; line-height: 4vh; height: 80vh;" >
+		<h1 style="font-family: YEONGJUPunggiGinsengTTF; text-align: center;">설문조사</h1>
+		<br>
+		이름&nbsp;<input type="text" name="ID">
+		<br>
+		이메일&nbsp;<input type="email" name="email" placeholder="love@example.com">
+		<br><br>
+		<b>나이</b><br>
+		<input type="radio" name="age" value="10">10대
+		<input type="radio" name="age" value="20">20대
+		<input type="radio" name="age" value="30">30대
+		<input type="radio" name="age" value="40">40대
+		<input type="radio" name="age" value="50">50대
+		<input type="radio" name="age" value="60+">60대 이상
+		<br><br>
+		<b>원하는 강의(복수응답 가능합니다.)</b><br>
+		<input type="checkbox" name="lesson_wishlist" value="html">html
+		<input type="checkbox" name="lesson_wishlist" value="javascript">javascript
+		<input type="checkbox" name="lesson_wishlist" value="css">css
+		<br><br>
+		<textarea name="wannasay" style="width: 100%; height: 30%;" placeholder="하고 싶은 말을 써주세요 :)"></textarea>
+		<input type="button" value="제출">
+	</div>
+</body>
+</html>
