@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>background</title>
+	<style>
+		div {
+			background-color: orange;
+			width: 500px;
+			height: 500px;
+
+		}
+		.background-img{
+			background-image: url(https://i.namu.wiki/i/SxO3LakjKGznHtbT_D5gYM2VNF8u91QFCwl4TSwpYQMO2_atpYJN1CKqyr0ZjkBrwsMkZ8rno0P5-OiPvwWBDNCOelUutpSY4E0FQ69GaaOnG6JfL1g7SBkeBi0JRPfZnxz7AZ6BpF04PNFMg9GX1w.webp);
+
+			/* background-repeat */
+			/* background-repeat: repeat; */
+			/* background-repeat: repeat-x; */
+			/* background-repeat: repeat-y; */
+			background-repeat: no-repeat;
+			/* background-position */
+
+
+			background-size: 150px;
+			/* background-size: cover; */
+			/* cover는 꽉채우는데 짤림 */
+			background-size: contain;
+			/* size도 꽉채우는데 안짤리는 만큼 채움 */
+			
+			/* background-attachtment */
+		}
+		.background-attachment{
+			width: 300px;
+			height: 300px;
+			overflow: scroll;
+			background-image: url(https://i.namu.wiki/i/SxO3LakjKGznHtbT_D5gYM2VNF8u91QFCwl4TSwpYQMO2_atpYJN1CKqyr0ZjkBrwsMkZ8rno0P5-OiPvwWBDNCOelUutpSY4E0FQ69GaaOnG6JfL1g7SBkeBi0JRPfZnxz7AZ6BpF04PNFMg9GX1w.webp);
+
+			background-attachment: local;
+			/* 로컬은 스크롤 내리면 같이 내려옴 */
+			/* background-attachment: scroll; */
+			/* 스크롤은 스크롤시 배경으로 고정되고 글만 내려옴 */
+			/* background-attachment: fixed; */
+			/* fixed는 요소 안에서만 아니라 뷰포트 기준 제일 바깥 배경으로서 고정됨 */
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="background-img"></div>
+	<hr>
+	<div class="background-attachment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cumque, reiciendis nam facere natus recusandae fugiat, magnam corporis vel neque temporibus consequuntur distinctio nihil repudiandae dicta repellat, veritatis quia autem?
+	Cupiditate reiciendis temporibus aspernatur nihil iusto aliquid vel porro commodi, laudantium adipisci, necessitatibus voluptates soluta at, quod sequi. Cumque nulla aliquam nihil similique at debitis est repellat nesciunt quos odit!
+	Optio repellendus odio a doloremque quidem facilis nostrum vitae? Dolore beatae sapiente, inventore, ea aliquid explicabo quo ratione molestias odio, blanditiis in quas nesciunt odit pariatur voluptatem. Voluptatum, similique pariatur.
+	Repellendus quasi iusto quam nisi sint, vero, velit odit repudiandae odio molestias error libero aspernatur aperiam hic quo eaque sequi impedit. Exercitationem odit facilis nostrum sed pariatur atque labore quasi!</div>
+</body>
+</html>

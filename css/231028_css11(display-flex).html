@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<style>
+		.container{
+			background-color: rgb(89, 176, 2);
+			width: 500px;
+			height: 500px;
+			display: flex;
+			/* flex-direction */
+			/* flex-direction: row-reverse; */
+			/* 방향 원래 좌에서 오였는데 오에서 좌로 바뀜 */
+			/* flex-direction: column; */
+			/* flex-direction: column-reverse; */
+			/* vice versa */
+			
+			/* flex-wrap */
+			/* nowrap시 원래처럼 500 안에 100짜리 8개 있으면 찡겨서 500을 채움
+			근데 wrap 시 500안에 100 5개 맞춰서 채우고, 그 밑에줄에 100짜리 3개가 정렬됨 결국 8개 모두 찡기지 않고 100*100사이즈 유지*/
+			/* flex-wrap: nowrap; */
+			flex-wrap: wrap;
+
+			/* justify-content: 주축에 대한 정렬 */
+			justify-content: flex-start; /*이게 기본값*/
+			justify-content: flex-end; /*뒤로 땡김. row-reverse는 뒤부터 시작하는데(cba|) 이건 순서는 그대론데 제일 뒤 content가 뒤로 땡겨짐(abc|)*/
+			justify-content: center;
+			/* center 는 가운데부터 시작. | cab | */
+			justify-content: space-between;
+			justify-content: space-around;
+			justify-content: space-evenly;
+			/* 얘네 셋 차이는 강의자료에 좋은 그림설명이 있다구리! */
+
+
+		}
+		div {
+			width: 100px;
+			height: 100px;
+		}
+		.item1{
+			background-color: red;
+		}
+		.item2{
+			background-color: yellow;
+		}
+		.item3{
+			background-color: yellowgreen;
+		}
+		.item4{
+			width: 100px;
+			height: 200px;
+			background-color: purple;
+		}
+		.item5{
+			width: 200px;
+			height: 150px;
+			background-color: pink;
+		}
+		.item6{
+			width: 100px;
+			height: 250px;
+			background-color: lightseagreen;
+		}
+		.container2
+		{
+			background-color: rgb(89, 176, 2);
+			width: 500px;
+			height: 500px;
+			display: flex;
+		}
+		.align-items{
+			align-items: stretch;
+			align-items: flex-end;
+			align-items: flex-start;
+		
+			/* align-content */
+			align-content: flex-start;
+			align-content: flex-end;
+		}
+
+		
+		</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+		<div class="item1"></div>
+		<div class="item2"></div>
+	</div>
+	<hr>
+	<div class="container2 align-items">
+		<div class="item4">1</div>
+		<div class="item5">2</div>
+		<div class="item6">3</div>
+	</div>
+</body>
+</html>
