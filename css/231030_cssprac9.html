@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Animation 실습</title>
+	<link rel="stylesheet" href="./src/style.css">
+	<style>
+	</style>
+</head>
+
+<body>
+	<section>
+		<article class="sky">
+			<img src="./src/sun.png" alt="태양" class="sun" />
+			<img src="./src/moon.png" alt="달" class="moon" />
+			<img src="./src/cloud.png" alt="큰 구름" class="cloud_1" />
+			<img src="./src/cloud.png" alt="작은 구름" class="cloud_2" />
+		</article>
+
+		<article class="city">
+			<img src="./src/city.png" alt="도시" class="city_img" />
+		</article>
+	</section>
+</body>
+
+</html>
+
+
+<!-- 
+	리더님 작업:
+	바디인 뷰포트자체를 결국 기준으로 잡게될 거니까 section따로 relative로 주지 않고 그대로 둠.
+	대신 아티클 애들을 absolute로 두면 section은 없으니까 알아서 그 위에 body를 기준으로 잡음.
+
+	작은구름 더 빨라서 지속시간을 반으로 줄여 빈도수를 높임
+
+	sq. 혹시 크기를 %로 잡으면 absolute처럼 상위 꺼 참고나하?
+-->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>애니메이션2</title>
+	<style>
+		div{
+			/* width: 100px; */
+			/* height: 100px; */
+			/* border-radius: 50%; */
+			/* background-color: aqua; */
+			position: absolute;
+			/* 반드시 position absolute이어야! */
+			/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+			animation-name: myani;
+			animation-duration: 3s;
+			animation-timing-function: ease;
+			animation-delay: 1s;
+
+		}
+		@keyframes myani {
+			from{
+				margin-left: 100%;
+				width: 300%;
+			}
+			to{
+				margin-left: 0%;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>“Guys, search on google!! As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place I’ve been looking for all my life. A little hideaway in some sinkhole somewhere. I’d always thought of it as a secret, imaginary place, and can barely believe that it actually exists. I close my eyes and take a breath, and wonder of it all settles over me like a gentle cloud.”</div>
+</body>
+</html>

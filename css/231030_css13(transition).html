@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>트랜지션</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: tomato;
+			transition-property: width;
+			transition-property: background-color;
+			transition-duration: 3s;
+			transition-timing-function: ease;
+			transition-delay: 1s;
+		}
+		
+		/* 마우스 갖다 대면 이렇게 될거라는거↓ */
+		.box:hover{
+			width: 300px;
+			height: 200px;
+			background-color: pink;
+		}
+		.box_prac{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			color: white;
+			overflow: auto;
+			/* transition: all 1s linear 0.5s; */
+			transition-property: all;
+			transition-duration: 1s;
+			transition-timing-function: linear;
+			transition-delay: 0.5s;
+		}
+		.box_prac:hover{
+			width: 300px;
+			height: 300px;
+		}
+		</style>
+</head>
+<body>
+	<div class="box">
+	</div>
+	<hr>
+	<div class="box_prac">
+		안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!안녕하세요!
+	</div>
+</body>
+</html>
