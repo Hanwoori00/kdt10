@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for문</title>
+	<script>
+		// for(let i = 0; i < 10; i++) {
+		// 	//초기화: i를 0으로 셋팅
+		// 	//조건식: i가 10보다 작을 때
+		// 	//증감식: i를 1씩 키우겠다
+		// 	console.log('i :', i) // i : 0~9
+		// }
+		
+		//실습 입력 받은 수까지 13의 배수이면서 홀수 찾기
+		let max = Number(prompt("최대값을 입력하세요"));
+		for(let i = 0; i < max; i = i + 13) {
+			if (i % 2 == 1)
+				console.log(i);
+		}
+
+		//실습 구구단
+		for(let i = 1; i < 9;) {
+			console.log(`------${++i}단-----`);
+			for(let j = 0; j < 9;) {
+				console.log(`${i} X ${++j} = ${i * j}`);
+			}
+		}		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

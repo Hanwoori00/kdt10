@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>while</title>
+	<script>
+				//while문
+		/*
+		i = 0;
+		while(i < 5) {
+			console.log('while i : ', i);
+			i++;
+		}
+		
+		i = 0;
+		while(1) {
+			console.log('while true :', i);
+			i++;
+			if (i > 10) {
+				break;
+			}
+		}
+		*/
+
+		//반복문 제어
+
+		//break문
+		for(let i = 0; i < 20; i++) {
+			if(i == 10) {
+				console.log('멈춰!');
+				continue;
+			}
+			console.log(i);
+		}
+		console.log("new");
+		//실습
+		while(1){
+			let max = Number(prompt("0부터100까지중 숫자 하나를 입력하세요"));
+			if (max >= 100 || max < 0 || typeof(max) != Number){
+				alert("입력가능 범위를 확인하세요");
+				continue;
+			}
+			let i = 0;
+			let res = 0;
+			while(++i < max) {
+				if (i % 2 == 0 || i % 3 == 0)
+					res = res + i;
+			}
+			alert(`2또는 3의 배수의 총 합은 : ${res} 입니다`);
+			break;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
