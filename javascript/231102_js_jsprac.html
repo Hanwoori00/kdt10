@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function solution(n) { // n만큼 수박. 3이면 수박수
+			var answer = '';
+			for(let i = 0; i < n; i++) {
+				if (i % 2 == 0)
+					answer += '수';
+				else
+					answer += '박';
+			}
+			return answer;
+		}
+		console.log('3:', solution(3));
+		console.log('4:', solution(4));
+		console.log('1:', solution(1));
+		// .....................................
+		function solution2(n) { // 약수 총합
+			var answer = 0;
+			for (var i = 1; i <= n; i++){
+				if (n % i == 0)
+				answer += i;
+			}
+			return answer;
+		}
+		console.log('2번문제 4:', solution2(6));
+		// ....................................
+		function solution3(n) // 자릿수 더하기
+		// {
+		// 	var answer = 0;
+		// 	var decTime = 0;
+		// 	var temp = n;
+		// 	while(temp / 10 >= 1){
+		// 		temp /= 10;
+				
+		// 		decTime++;
+		// 	}
+		// 	while(decTime >= 0){
+		// 		answer += (n / (10 ** decTime--)); 
+		// 	}
+		// 	return answer;
+			//parseInt활용해보자
+		// }
+		{
+			var answer = 0;
+			var arr = String(n);
+			var temp = arr.split();
+			for(let i = 0; i < arr.length; i){
+				answer += Number(arr[i++]);
+			}
+			return answer
+		}	
+
+		console.log('3번문제 14:', solution3(14));
+		
+
+		//----------------------------------
+		//없는 숫자 더하기
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

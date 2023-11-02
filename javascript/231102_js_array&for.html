@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열함수</title>
+	<script>
+		
+		
+		//배열함수
+		
+		
+		let fruits = ['apple', 'banana', 'orange', 'melon', 'grape'];
+
+		//for of
+		console.log('for basic');
+		for(let i = 0; i < fruits.length; i++)
+			console.log(fruits[i]);
+
+		console.log('for of');
+		for(let fruit of fruits) {
+			console.log(fruit);
+		}
+		
+		//forEach
+		console.log('forEach'); ////이거 완전 생소. 인자는 내가지은 인자, index, arr을 다룰 수 있음
+		fruits.forEach((fruit, index, arr) => {
+			console.log('fruit :', fruit);
+			console.log('index :', index);
+			console.log('arr :', arr);
+		})
+		console.log('forEach');
+		fruits.forEach((fruit) => {
+			console.log('fruit :', fruit);
+		}) // 이렇게 하나만도 가능. 근데 forEach 안에 기재된 인자만 다룰 수 있음. 이땐 index 못부름
+
+		// filter
+		// forEach과 동일하게 스윽 훑음. 배열 반환
+		console.log('filter');
+		let filterRes = fruits.filter((fruit) => {
+			return fruit.includes('b')})
+		console.log('filterRes:', filterRes);
+		let filterRes2 = fruits.filter(fruit=> fruit.includes('p'))
+		console.log('filterRes :', filterRes2);
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

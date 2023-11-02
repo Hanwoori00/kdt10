@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for_prac!</title>
+	<script>
+		let numArr = [];
+		for(let i = 1; i <= 100; i++){
+			numArr.push(i);
+		}
+		console.log(numArr);
+		
+		//----------------------------
+		let sum = 0;
+		for(let i = 1; i <= numArr.length; i++){
+			sum += i;
+		}
+		console.log('For 문 합:', sum);
+		//----------------------------
+		sum = 0;
+		for(let num of numArr){
+			sum += num;
+		}
+		//for(let num of numArr) sum += num; 한줄이면 이렇게도 가능
+
+		console.log('For of 문 합', sum);
+		//----------------------------
+		sum = 0;
+		numArr.forEach((num) => {
+			sum += num;
+		}) // 얘도 한줄로 가능
+		console.log('forEach 문 합 :', sum);
+
+		//실습2
+		let fruits1 = ["사과", "딸기", "파인애플","수박", "참외", "오렌지", "자두", "망고"];
+		let fruits2 = ["수박", "사과", , "참외", , "오렌지", "파인애플", "망고"];
+		let same = fruits1.filter((fruit1) => {
+			for(let fruit2 of fruits2) {
+				if (fruit1 == fruit2)
+					return fruit1
+			}
+		});
+		console.log('same :', same);
+		let diff = fruits1.filter((fruit1) => {
+				if (fruits2.indexOf(fruit1) == -1)
+					return fruit1
+			}
+		);
+		console.log('diff :', diff);
+
+		// for(let i = 0; i < fruits1.length; i++) {
+
+		// }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
