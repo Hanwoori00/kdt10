@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dom_prac</title>
+
+</head>
+<body>
+	<div>
+		값1: <input type="text" id="값1">
+	</div>
+	<div>
+		값2: <input type="text" id="값2">
+	</div>
+	<div>
+		연산자: <input type="text" id="연산자">
+	</div>
+	<div>
+		결과: <input type="text" id="결과">
+	</div>
+	<br>
+	<br>
+	<button onclick="cal()">계산하기</button>
+	<button onclick="init()">초기화</button>
+
+	<script>
+		let val1 = document.getElementById("값1");
+		let val2 = document.getElementById("값2");
+		let operator = document.getElementById("연산자");
+		let	res = document.getElementById("결과");
+		
+		
+		//이때 let val1 = document.getElementById("값1").value;
+		//이렇게 하면 value 값만 받아오게 됨. "값1"의 주소까지 오는게 아님. 그래서 그걸 수정한다면 받아온 value값을 수정할 뿐, "값1"을 제어할 수 없음.
+		function cal(){
+			if(operator.value == '+')
+				res.value = Number(val1.value) + Number(val2.value);
+			else if(operator.value == '-')
+				res.value = Number(val1.value) - Number(val2.value);
+			else if(operator.value == '*')
+				res.value = Number(val1.value) * Number(val2.value);
+			else if(operator.value == '/')
+				res.value = Number(val1.value) / Number(val2.value);
+		}
+		
+		function init(){
+			val1.value = "";
+			val2.value = "";
+			operator.value = "";
+			res.value = "";
+		}
+
+	</script>
+</body>
+</html>

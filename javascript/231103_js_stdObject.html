@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>표준내장객체 Standard Built-in Object</title>
+	<script>
+		//표준 내장 객체
+		// : 자바스크립트가 기본적으로 가지고 있는 객체
+		// : 빌트인
+
+		//1. Date 객체
+		let now = new Date();
+		//now의 type은 Date라는 객체가 됨
+		console.log(now);
+		console.log(now.getFullYear() + "년");
+		console.log(now.getMonth()+"월"); // 11월인데 10월이라 나옴. 0부터 숫자 세기 때문. +1을 해줘야. 0~11
+		console.log(now.getDate() + '일');
+		console.log(now.getHours() + '시');
+		console.log(now.getMinutes() + '분');
+		console.log(now.getSeconds() + '초');
+		console.log(now.getMilliseconds() + 'ms');
+		console.log(now.getDay() + '요일'); // 0~6나옴. 0이 일요일, 6이 토요일
+
+		//연습
+		//Date 객체를 이용해서 오늘 요일을 얻고, 오늘이 평일인지 주말인지 출력 (switch문 이용해서!)
+		let day = now.getDay();
+		if (day == 0 || day == 6)
+			console.log("주말입니다");
+		else
+			console.log("평일입니다");
+
+		//switch
+		switch(now.getDay()) {
+			case 0:
+			case 6:
+				//case 0에 해당되는게 없으면, 또 break가 없으면  바로 밑에 break가 있는 case로 들어가버림. case가 맞는지 기준이 아니라 break가 기준임. break 가 없으니 case 0 에 다른 console 있다면 console 실행후 break 있는 case로 넘어감.
+				//switch 공부해보자.
+				console.log('주말');
+				break;
+			default:
+				console.log('평일');
+				break;
+		}
+		//3항 연산자
+		now.getDay() == 0 || now.getDay() == 6 ? console.log('주말') : console.log('평일');
+
+
+
+		//2. Math객체
+		//속성
+		console.log(Math.PI);
+		console.log(Math.E);
+		console.log(Math.SQRT2); // 루트2
+
+		// 메소드
+		console.log(Math.min(45, 2, 0, -5, 15));
+		console.log(Math.max(45, 2, 0, -5, 15));
+		console.log(Math.random()); // 0 <= x < 1
+		console.log(Math.round(5.1)); // 반올림
+		console.log(Math.floor(5.1)); // 내림
+		console.log(Math.ceil(5.1)); // 올림
+
+		// 1 <= x < 101
+		console.log(Math.ceil(Math.random()*100));
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

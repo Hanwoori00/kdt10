@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dom_prac2</title>
+</head>
+<body>
+	방명록입니다.<br>
+	<div>
+		작성자
+		<input type="text" id="user">
+	</div>
+	<div>내용
+		<input type="text" id="content">
+	</div><br>
+	<button onclick="addComent()">작성</button><br>
+	<table border="1px solid black" id="tab">
+		<tr>
+			<td>번호</td>
+			<td>작성자</td>
+			<td>내용</td>
+			<td>작성일</td>
+		</tr>
+	</table>
+
+	<script>
+		let userNum = 0;
+		let newUserName = document.getElementById("user");
+		let newContent = document.getElementById("content");
+		let tab = document.getElementById("tab");
+
+		function addRow(newCol, text) {
+			newRow = document.createElement('td');
+			newRow.textContent=text;
+			newCol.appendChild(newRow);		
+		}
+
+		function addComent() {
+			var today = new Date();
+			userNum += 1;
+			//행추가
+			let newCol = document.createElement('tr');
+			tab.appendChild(newCol);
+			//첫 열(유저번호)
+			addRow(newCol, userNum);
+			//둘째 열(유저이름)
+			addRow(newCol, newUserName.value);
+			//셋째 열(내용)
+			addRow(newCol, newContent.value);
+			//넷째 열(시간)
+			addRow(newCol, `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} ${today.getHours()} : ${today.getMinutes()}`);
+			
+			newUserName.value = "";
+			newContent.value = "";
+			/*
+			//초기화 대른 예시
+			let inputs = document.querySelectorAll('input'); // NodeList 요소들을 배열로.
+			for(let i = 0; i < inputs.length; i++) 
+				inputs[i].value = "";
+			//inputs[i] : 위에 name, content 라는 변수로 만들어둔 요소와 동일
+			*/
+		}
+// 부모 안에 만든 후 그 내용 채우는 방법 있고, 독립적으로 만든 후 부모 안에 집어 넣어도 됨
+	</script>
+</body>
+</html>

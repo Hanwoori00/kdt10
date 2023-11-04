@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이벤트리스너</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			/* contr */
+		}
+		.div1 {
+			background-color: yellowgreen;
+		}
+		.div2 {
+			background-color: violet;
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<div class = "container">
+		<div class="div1">div1</div>
+		<div class="div2">div2</div>	
+	</div>
+	<script>
+		let div1 = document.querySelector('.div1');
+		div1.addEventListener("click", function(){
+			console.log('div1의 click이벤트 발생!');
+		});
+		
+		// mouse
+		let div2 = document.querySelector('.div2');
+		div2.addEventListener('mouseover', function(){
+			console.log('div2에 mouseover 이벤트 발생!')
+		});
+		div2.addEventListener('mouseout', function(){
+			console.log('div2에 mouseout 이벤트 발생!')
+		}); // 기준은 mouseover임. 시작부터 발생이 아니라 한번이라도 들어갔다가 나와아.
+
+		//focus
+		let input = document.querySelector('input');
+		input.addEventListener('focus', function(){
+			console.log('콘솔로그 포커스!!!')
+		})
+
+		//keyboard
+		input.addEventListener('keydown', function(e){
+			
+			console.log('input에 keydown 이벤트 발생');
+			console.log('e: ', e ); // event관한 다양한 파라미터 나옴
+			console.log('e.target: ', e.target ); // 태그 요소가 나옴
+		}) // input에 뭔가를 칠때마다
+
+		//scroll
+		let container = document.querySelector('.container');
+		
+		container.addEventListener('scroll', function(){
+			console.log('conatiner에 scroll이벤트 발생');
+		})//scroll 없으면 실행 x
+		window.addEventListener('scroll', function(){
+			console.log('scroll에 scroll이벤트 발생');
+		}) // 전체창이라서 scroll 거의 항상 있음. 그래서 가능
+		document.addEventListener('scroll', function(){
+			console.log('document에 scroll이벤트 발생');
+		}) // 전체창이라서 scroll 거의 항상 있음. 그래서 가능 // 둘 차이 아직까진 거의 같다고 봐도 무방.
+		
+	</script>
+</body>
+</html>

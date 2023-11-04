@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>돔1</title>
+</head>
+<body>
+	<div class = "container"> 
+		<div class="box" id = "green">1</div>
+		<div class="box" id = "red">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+		<div class="box">5</div>
+	</div>
+	<input type="text" name = 'userName' id = >
+
+	<script>
+		//요소 선택
+
+		//1. getElementById : id 속성값으로 요소를 선택 (요소 하나만 선택)
+		let dom1 = document.getElementById('green');
+		console.log(dom1);
+		
+		//2. getElementsByClassName
+		// htmlcollection
+		// class 속성값으로 요소 선택 // 배열로 반환
+		let dom2 = document.getElementsByClassName('box');
+		console.log(dom2);
+		//for 문으로 배열에 접근 가능
+		for (let i = 0; i < dom2.length; i++) {
+			console.log(dom2[i]);
+		}
+
+		//3. getElementsByTagName
+		//태그 이름 기준으로 요소 선택 // 배열 반환
+		// htmlcollection
+		let dom3 = document.getElementsByTagName('div')
+		console.log(dom3);
+		
+		//4. getElementsByName
+		// name속성값으로 요소 선택
+		// nodelist 배열
+		let dom4 = document.getElementsByName('userName');
+		console.log(dom4); // 배열 반환
+
+		//5. querySelector
+		// 선택자를 이용해서 요소 선택  //???쿼리? 요소?
+		// CSS 선택자와 동일(클래스 : ., id : #, 태그 : 태그이름 등등)
+		// nodelist 배열
+		let dom5 = document.querySelector('#red');
+		console.log(dom5);
+		let dom6 = document.querySelectorAll('div');
+		console.log(dom6);
+	</script>
+<!-- ----------------------------- -->
+	<div id = "parent"> 
+		Text
+		<div id = 'two'>div 두번째 Text</div>
+		<div>div 세번째 Text</div>
+	</div>
+	<script>
+		let parent = document.getElementById('parent');
+		console.log(parent);
+		let ChldrOfParent = parent.children; //이런식으로 오브젝트의 자식요소로 선언 가능
+		let ChldrOfParentNodes = parent.childNodes;
+
+		console.log('children : ', ChldrOfParent);
+		console.log('children : ', ChldrOfParent.namedItem('two'));
+		console.log('childrenNodes : ', ChldrOfParentNodes);
+
+
+		//자식 추가 (추가할 부모 선택 -> 추가할 자식 만들어내기 -> 만든 자식 부모에게 붙여주기)
+		let child1 = document.createElement('div');
+		child1.innerText = '네번째 Text';
+		parent.appendChild(child1);
+		/*
+		태그의 내부 내용을 변경 (여러가지 자식 추가 방법, 그 차이)
+		-innerText : 문자열을 넣는 것 & 공백문자 제거
+		-innerHTML : html 요소를 넣는 것.
+		-textContent : 문자열을 넣는 것. & 공백문자 반환
+		*/
+
+		let two = document.getElementById('two');
+		two.innerHTML = '강조'; // 원래 있던애에 html값 추가
+		two.innerHTML = '<strong>강조</strong>'; // 원래 있던애에 html값 추가
+		two.textContent = '         textContent<strong>강조</strong>.    &&  ,'; // 태그 들어와도 문자열로 인식
+		console.log(two.innerText);
+
+	</script>
+
+</body>
+</html>
+
+<!-- 
+	HTMLCollection vs NodeList
+
+	1.
+	-HTMLCollection 객체는 태그 요소만 포함
+	-N~객체는 태그와 텍스트 노드 등을 모두 포함
+	
+	2.
+	-H~ 객체는 자식 요소 노드에 접근할때 인덱스 방식과 namedItem 메소드 방식을 사용할 수 있다.
+	-N~ 객체는 인덱스로만 접근 가능하다.
+
+	3.
+	-H~ 객체는 동적이고, N~ 객체는 정적이다.
+	-H는 Dom을 다루면서 새로운 요소가 추가됐을 때, 추가된 요소도 가져올 수 있다.
+	-N 객체는 새로 추가된 요소를 가져올 수 없다.
+
+	4.
+	-H~ : 실제 배열 x, 배열과 유사한 객체. forEach 사용불가, for만 가능
+	-N~ : 실제 배열 O. forEach문 사용 가능
+-->
+<!-- 
+	https://developer-talk.tistory.com/848
+	// 반환값으로서 배열과 노드리스트 배열의 차이.
+	
+	https://kamang-it.tistory.com/entry/JavaScript15%EC%9C%A0%EC%82%AC%EB%B0%B0%EC%97%B4-%EA%B0%9D%EC%B2%B4Arraylike-Objects
+	// 유사배열에 관한 개념과 활용법
+-->
