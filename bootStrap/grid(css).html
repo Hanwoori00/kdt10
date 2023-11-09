@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			/* 세로줄이 6개라 결과적으로 가로칸 갯수가 6개가 됨 */
+			grid-template-rows: repeat(4, 100px);
+			/* 가로줄이 4줄이라 결과적으로 세로칸 갯수가 4개가 됨 */
+			box-sizing: border-box;
+			/* box */
+		}
+		.item1 {
+			background-color: #F94144;
+			grid-column: span 6; 
+			/* 6칸짜리 가로 한줄이지만 6개의 세로줄로 이루어져 있어서... col. */
+			/* span 6칸 만큼 확장하겠다. */
+		}
+		.item2 {
+			background-color: #F3722C;
+			grid-row: span 2; 
+		}
+		.item3 {
+			background-color: #F8961E;
+			grid-column: span 4; 
+		}
+		.item4 {
+			background-color: #43AA8B;
+			grid-row: span 2; 
+		}
+		.item5 {
+			background-color: #F9C74F;
+			grid-column: span 2; 
+		}
+		.item6 {
+			background-color: #90BE6D;
+			grid-column: span 2; 
+		}
+		.item7 {
+			background-color: #577590;
+			grid-column: span 6; 
+		}
+
+	</style>
+<body>
+	<div class="grid-container">
+		<div class="grid-item item1">item</div>
+		<div class="grid-item item2">item</div>
+		<div class="grid-item item3">item</div>
+		<div class="grid-item item4">item</div>
+		<div class="grid-item item5">item</div>
+		<div class="grid-item item6">item</div>
+		<div class="grid-item item7">item</div>
+	</div>
+</body>
+</html>
+
+<!-- 
+#F94144
+#F3722C
+#F8961E
+#43AA8B
+#F9C74F
+#90BE6D
+#577590
+-->

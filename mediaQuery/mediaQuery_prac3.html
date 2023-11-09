@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script
+		src="https://kit.fontawesome.com/837ff3adc1.js"
+		crossorigin="anonymous"
+    ></script>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		header{
+			width: 100%;
+			height: 100px;
+			z-index: 100;
+		}
+		
+		header .inner{
+			border: 1px solid black;
+			background-color: lightblue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+		
+		header .inner .logo{
+			position: relative;
+			right: 200px;
+			color: white;
+			font-size: 2rem;
+		}
+
+		header .inner .menu{
+			display: flex; 
+			/* flex와 block의 차이??? */
+		}
+
+		header .inner .menu li{
+			margin: 0 10px;
+			font-weight: 800;
+			cursor: pointer;
+		}
+		/* 태블릿 */
+		@media screen and (480px < width <= 786px){
+			header .inner{
+				flex-direction: column;
+			}
+			header .inner .logo{
+				right: 0px;
+			}
+			header .inner .menu{
+				position: absolute;
+				top : 100px;
+				flex-direction: column;
+				background-color: azure;
+			}
+			header .inner .menu li{
+				padding: 8px;
+				/* margin이 아닌 padding을 주어야 커서 영역이 보다 더 커짐 */
+				font-weight: 400;
+			}
+		}
+
+		@media screen and (width <= 480px){
+			header{
+				height: 45px;
+			}
+			
+			header .inner{
+				flex-direction: column;
+				background-color: palevioletred;
+			}
+			header .inner .logo{
+				right: 0px;
+			}
+			header .inner .menu{
+				position: absolute;
+				top : 100px;
+				flex-direction: column;
+				background-color: azure;
+			}
+			header .inner .menu li{
+				padding: 8px;
+				font-weight: 400;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="inner">
+			<div class="logo">
+				<i class="fa-solid fa-igloo"></i>
+			</div>
+			<ul class="menu">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+				<li>메뉴4</li>
+			</ul>
+		</div>
+	</header>
+</body>
+</html>

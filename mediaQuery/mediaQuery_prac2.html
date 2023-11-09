@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			border-radius: 10%;
+			border: 1px solid salmon;
+			margin: 5px;
+		}
+
+		@media screen and (width > 700px) {
+			body{
+				display: flex;
+			}
+			div{
+				background-color: black;
+			}
+		}
+		@media screen and (width <= 700px) {
+			div{
+				background-color: skyblue;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
